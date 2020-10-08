@@ -1,0 +1,107 @@
+
+<!-- Material form subscription -->
+<div class="card" style="width: 70%; margin: 0 auto;">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Редактирование</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5">
+
+        <!--Grid row-->
+        <div class="row" style="color: #757575;">
+
+            {{!-- <p>Join our mailing list. We write rarely, but only the best content.</p>
+
+            <p>
+                <a href="" target="_blank">See the last newsletter</a>
+            </p> --}}
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <!--Card content-->
+                <div class="card-body px-lg-5">
+                
+                    <!-- Form -->
+                    <form class="text-center" style="color: #757575;" method="POST">
+                    
+                        {{!-- <p>Join our mailing list. We write rarely, but only the best content.</p>
+
+                        <p>
+                            <a href="" target="_blank">See the last newsletter</a>
+                        </p> --}}
+
+                        <!-- Mark -->
+                        <div class="md-form mt-3" style="text-align: left;">
+                            <span>Марка</span>
+                            <select class="mdb-select" name="mark" id="marks">                
+                                <option value="" selected disabled>Выберите марку авто...</option>
+                                {{#each marks}}
+                                <option value="{{id}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                            <script>
+                                document.querySelector('#marks [value="' + "{{markId}}" +'"]').selected = true
+                            </script>
+                            <input type="text" name="id" value="{{car.id}}" hidden>
+                        </div>
+
+                        <!-- Model -->
+                        <div class="md-form mt-3">
+                            <input type="text" id="materialSubscriptionFormPasswords" class="form-control" name="model" value="{{car.model}}">
+                            <label for="materialSubscriptionFormPasswords">Модель</label>
+                        </div>
+
+                        <!-- YearProduct -->
+                        <div class="md-form">
+                            <input type="number" id="materialSubscriptionFormPasswords" class="form-control" name="yearProduct" value="{{car.yearProduct}}">
+                            <label for="materialSubscriptionFormPasswords">Год производства</label>
+                        </div>
+
+                        <!-- Color -->
+                        <div class="md-form mt-3">
+                            <input type="text" id="materialSubscriptionFormPasswords" class="form-control" name="color" value="{{car.color}}">
+                            <label for="materialSubscriptionFormPasswords">Цвет</label>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="md-form mt-3">
+                            <input type="number" id="materialSubscriptionFormPasswords" class="form-control" name="price" value="{{car.price}}">
+                            <label for="materialSubscriptionFormPasswords">Стоимость, $</label>
+                        </div>
+
+                        <!-- Picture Path -->
+                        <div class="md-form mt-3">
+                            <input type="text" id="materialSubscriptionFormPasswords" class="form-control" name="pictUrl" value="{{car.pictUrl}}">
+                            <label for="materialSubscriptionFormPasswords">Путь к картинке</label>
+                        </div>
+
+                        <!-- Sign in button -->
+                        <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Редактировать</button>
+
+                    </form>
+                    <!-- Form -->
+
+                </div>
+            </div>
+            
+           <!--Grid column-->
+            <div class="col-md-6 mb-4 mb-md-0">
+    
+              <!--Image-->
+              <div style="width: 100%; text-align: center;">
+                <img src="{{car.pictUrl}}" class="img-fluid"
+                  alt="{{car.mark}} {{car.model}}">
+              </div>
+    
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+    </div>
+
+</div>
+<!-- Material form subscription -->

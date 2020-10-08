@@ -1,0 +1,20 @@
+const router = require('express').Router()
+const MainController = require('../controllers/main.controller')
+
+router.get('/', MainController.indexGet)
+router.post('/', MainController.indexPost)
+router.get('/add-car', MainController.addNewCarGet)
+router.post('/add-car', MainController.addNewCarPost)
+router.get('/add-mark', MainController.addNewMarkGet)
+router.post('/add-mark', MainController.addNewMarkPost)
+router.get('/infoCar', MainController.infoCar)
+router.get('/editCar', MainController.editCarGet)
+router.post('/editCar', MainController.editCarPost)
+router.get('/deleteCar', MainController.deleteCarGet)
+router.post('/deleteCar', MainController.deleteCarPost)
+// router.get('/error', MainController.errorPage)
+// router.get('/ok', MainController.okPage)
+// router.get('/edit', MainController.index)
+// router.get('/delete', MainController.index)
+
+module.exports = router

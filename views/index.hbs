@@ -1,0 +1,49 @@
+<div style="width: 97%; margin: 0 auto;">
+  {{#if allCars}}
+  <div class="row row-cols-1 row-cols-md-2">
+    {{#each allCars}}
+    <div class="col mb-4">
+    <!-- Card -->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img class="card-img-top" src="{{pictUrl}}"
+            alt="Some car picture">
+          {{!-- <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a> --}}
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+
+          <!--Title-->
+          <h4 class="card-title">{{mark}}</h4>
+          <!--Text-->
+          <p class="card-text">{{model}}</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <form method="POST">
+            <input type="text" name="id" value="{{id}}" hidden>
+            <a href="/">
+              <button type="submit" class="btn btn-light-blue btn-md" name="btnAction" value="info">Детальнее</button>
+            </a>
+            <a href="/">
+              <button type="submit" class="btn btn-yellow btn-md" name="btnAction" value="edit">Редактировать</button>
+            </a>
+            <a href="/">
+              <button type="submit" class="btn btn-red btn-md" name="btnAction" value="delete">Удалить</button>
+            </a>
+          </form>
+
+        </div>
+
+      </div>
+      <!-- Card -->
+    </div>
+    {{/each}}
+  {{else}}
+    <h4 class="text-center">В данный момент автосалон пуст</h4>
+  {{/if}}
+</div>
+</div>
